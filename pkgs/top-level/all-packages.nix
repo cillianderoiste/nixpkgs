@@ -1539,7 +1539,7 @@ with pkgs;
   riot-web = callPackage ../applications/networking/instant-messengers/riot/riot-web.nix {
     conf = config.riot-web.conf or null;
   };
-  
+
   roundcube = callPackage ../servers/roundcube { };
 
   rsbep = callPackage ../tools/backup/rsbep { };
@@ -3784,6 +3784,8 @@ with pkgs;
   libfann = callPackage ../development/libraries/libfann { };
 
   libgaminggear = callPackage ../development/libraries/libgaminggear { };
+
+  libhandy = callPackage ../development/libraries/libhandy { };
 
   libipfix = callPackage ../development/libraries/libipfix { };
 
