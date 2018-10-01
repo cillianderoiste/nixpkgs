@@ -9,7 +9,7 @@ stdenv.mkDerivation rec {
   version = "3.30.1";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/epiphany/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/epiphany/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "1pcn7gnnnwbw273bjapy04sk7bz36i3zp1fbvpcjcd3j8y9w2kcb";
   };
 

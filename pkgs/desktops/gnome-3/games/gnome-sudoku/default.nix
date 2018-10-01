@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
   version = "3.30.0";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/gnome-sudoku/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/gnome-sudoku/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "1xy986s51jnrcqwan2hy4bjdg6797yr9s7gxx2z2q4j4gkx3qa1f";
   };
 

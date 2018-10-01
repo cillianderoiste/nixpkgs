@@ -7,7 +7,7 @@ stdenv.mkDerivation rec {
   version = "1.54.1";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/gjs/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/gjs/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "1g38r0fj7pbxlqwylwghphb1k5749rdchfm9yxrryi5029cgx5xi";
   };
 

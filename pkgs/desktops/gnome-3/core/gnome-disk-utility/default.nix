@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
   version = "3.30.1";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/gnome-disk-utility/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/gnome-disk-utility/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "1yqhlbbs39wszzrr1d4z87scyxhgbpaix8xc8mhhjnmlimlyjxql";
   };
 

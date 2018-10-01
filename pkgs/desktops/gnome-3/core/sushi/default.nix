@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
   version = "3.30.0";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/sushi/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/sushi/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "0zpaiw5r734fky3zq95a6szwn7srbkpixajqg2xvdivhhx4mbnnj";
   };
 

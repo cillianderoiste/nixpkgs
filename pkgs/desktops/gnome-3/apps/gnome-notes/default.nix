@@ -10,7 +10,7 @@ in stdenv.mkDerivation rec {
   name = "gnome-notes-${version}";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/bijiben/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/bijiben/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "0ynmrrabha7cxhiy5dn1bdz60am38qy0nx0p1a52j7qah7fllz7l";
   };
 

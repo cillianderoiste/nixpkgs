@@ -10,7 +10,7 @@ in stdenv.mkDerivation rec {
   name = "gnome-contacts-${version}";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/gnome-contacts/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/gnome-contacts/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "1vizpjb3ll7pndxpvwjjplgdn6b2wf0mjqr9fga0p2cj57v00m89";
   };
 

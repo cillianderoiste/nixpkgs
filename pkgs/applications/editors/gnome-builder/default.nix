@@ -36,7 +36,7 @@ in stdenv.mkDerivation {
   name = "${pname}-${version}";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/${pname}/${gnome3.versionBranch version}/${pname}-${version}.tar.xz";
+    url = "mirror://gnome/sources/${pname}/${stdenv.lib.versions.majorMinor version}/${pname}-${version}.tar.xz";
     sha256 = "1pshzpjy9rk6gijlm97s316aihykzxrmb07vilp17q5857passak";
   };
 

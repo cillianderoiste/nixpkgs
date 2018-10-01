@@ -11,7 +11,7 @@ python3.pkgs.buildPythonApplication rec {
   format = "other";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/${pname}/${gnome3.versionBranch version}/${pname}-${version}.tar.xz";
+    url = "mirror://gnome/sources/${pname}/${stdenv.lib.versions.majorMinor version}/${pname}-${version}.tar.xz";
     sha256 = "1nd3a4n63062ljpdnsdnwmgqs0npikvmhf6fsmw06grrrcrdh584";
   };
 

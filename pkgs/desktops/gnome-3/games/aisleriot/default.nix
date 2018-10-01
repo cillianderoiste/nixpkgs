@@ -7,7 +7,7 @@ stdenv.mkDerivation rec {
   version = "3.22.6";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/aisleriot/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/aisleriot/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "182sgqb3rk70v5h571ndln883q14s661pdxg3l48rxxvfmqp16i3";
   };
 

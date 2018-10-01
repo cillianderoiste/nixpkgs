@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
   outputs = [ "out" "dev" ];
 
   src = fetchurl {
-    url = "mirror://gnome/sources/evolution-data-server/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/evolution-data-server/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "03nn1mi5wlnagafhqbn57g4nhq3qkaxa94fxrgsfwxzdig71w8m4";
   };
 

@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
   version = "3.30.0";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/gnome-chess/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/gnome-chess/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "153wwh0861qfg53myyc3iwlqm989lbhdrlmsxaibmkxv3pgpl7ma";
   };
 

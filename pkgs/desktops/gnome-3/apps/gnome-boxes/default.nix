@@ -14,7 +14,7 @@ in stdenv.mkDerivation rec {
   name = "gnome-boxes-${version}";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/gnome-boxes/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/gnome-boxes/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "0ldkw92yp564gnpa37vni6jx23namvcbsb6d4lcd8zqxbfhk2x5v";
   };
 

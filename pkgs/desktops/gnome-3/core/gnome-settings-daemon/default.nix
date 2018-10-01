@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
   version = "3.30.1.1";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/gnome-settings-daemon/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/gnome-settings-daemon/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "1b14ag0wjyzi7fgabdcpivgh01mmc53rpdhwrzfwwg98kly4x7xp";
   };
 

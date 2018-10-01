@@ -50,7 +50,7 @@ stdenv.mkDerivation rec {
   name = "glib-${version}";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/glib/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/glib/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "1mnp4vankish8bqxymdl591p9v1ynk7pfc5dmpx3vamn4vcskmlp";
   };
 

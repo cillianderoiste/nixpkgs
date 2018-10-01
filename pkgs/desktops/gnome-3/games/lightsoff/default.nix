@@ -7,7 +7,7 @@ stdenv.mkDerivation rec {
   version = "3.30.0";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/lightsoff/${gnome3.versionBranch version}/${name}.tar.xz";
+    url = "mirror://gnome/sources/lightsoff/${stdenv.lib.versions.majorMinor version}/${name}.tar.xz";
     sha256 = "1cv5pkw0n8k5wb98ihx0z1z615w1wc09y884wk608wy40bgq46wp";
   };
 
