@@ -15,10 +15,10 @@ stdenv.mkDerivation {
   '';
 
   installPhase = ''
-    mkdir -p $out/{bin,lib,include/hdhomerun}
+    mkdir -p $out/{bin,lib,include/libhdhomerun}
     install -Dm444 libhdhomerun${stdenv.hostPlatform.extensions.sharedLibrary} $out/lib
     install -Dm555 hdhomerun_config $out/bin
-    cp *.h $out/include/hdhomerun
+    cp *.h $out/include/libhdhomerun
   '';
 
   meta = with stdenv.lib; {
